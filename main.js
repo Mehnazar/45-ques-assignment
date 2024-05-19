@@ -396,12 +396,42 @@ console.log(city_country("tokyo", "japan"));
 console.log(city_country("Paris", "France"));
 //Q#40
 function make_album(artist, title, tracks) {
-    let album = { artist, title };
+    let album = { artist, title, tracks };
     if (tracks) {
-        album[`tracks`] = tracks;
+        album['tracks'] = tracks;
     }
     return album;
 }
-console.log(make_album("Moosa", "My first album"));
-console.log(make_album("hoorain", "journey book"));
-console.log(make_album("anaya", "smartness", 12));
+console.log(make_album("first Artist", "the first album"));
+console.log(make_album("second Artist", "second Edition"));
+console.log(make_album("allama Iqbal", " nazmo ki dunia", 3));
+//Q#41
+let magicians = ["salaar", "halaar", "famous"];
+function show_magician(magicianName) {
+    magicians.forEach(magicians => {
+        console.log(magicians);
+    });
+}
+show_magician(magicians);
+//Q#42
+function make_great(magicians) {
+    for (let i = 0; i < magicians.length; i++) {
+        magicians[i] = magicians[i] + "the great";
+    }
+}
+make_great(magicians);
+show_magician(magicians);
+// Q#44
+function sandwitch(...items) {
+    console.log(`making a sandwitch with:${items.join(',')}`);
+}
+sandwitch("olives", "carrot", "potato");
+sandwitch("cheese", "egg");
+sandwitch("ketchup", "mayogarlic", "bbq sauce");
+//Q#45
+function make_car(manufacturer, model, ...options) {
+    let car = { manufacturer, model };
+    options.forEach(([key, value]) => car[key] = value);
+    return car;
+}
+console.log(make_car("toyota", "carolla", ["red", "year", 2016]));
