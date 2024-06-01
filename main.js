@@ -80,9 +80,9 @@ guest.forEach(guest => {
 });
 //q#16
 console.log("hurrah ! I've found a bigger dinner table");
-guest.unshift("hareem fatima");
-guest.splice(guest.length / 2, 0, "alayna");
-guest.push("ibraheem ");
+guest.unshift("hareem fatima"); // add element at the begining of an array
+guest.splice(guest.length / 2, 0, "alayna"); // adds alayana in the middle of array as 3/2 = 1.5 so it adds after index 1
+guest.push("ibraheem "); // push method add entity at the end of an arRAY
 guest.forEach(guest => {
     console.log("Dear " + guest + " lets join me for the dinner");
 });
@@ -90,16 +90,17 @@ guest.forEach(guest => {
 // shrinking the list
 console.log("unfortunately i missed the table and i have seats for only two persons");
 while (guest.length > 2) {
-    let removedGuest = guest.pop();
+    let removedGuest = guest.pop(); // deleting array elements
     console.log("sorry, " + removedGuest + " i can't invite you for dinner");
 }
 guest.forEach(guest => {
     console.log('Dear ' + guest + ' you are still invited to dinner');
 });
-guest.splice(0, guest.length);
+guest.splice(0, guest.length); // removing array elements to clear the list
 console.log(guest); // show an empty list
 //Q#18
 // seeing the world
+console.log("\n Q#18 seeing the world");
 let myTrip = ["kaaba", "madina", "switzerland", "paris", "london"];
 console.log("original order: ", myTrip);
 console.log("Alphabetical order: ", [...myTrip].sort());
@@ -116,46 +117,53 @@ myTrip.reverse();
 console.log("reverse Alphabetical order:", myTrip);
 //Q#19
 // indicating total guest in the list
+console.log("Q#19 indicating total number of guest in a list");
 let listOfGuest = ["moosa", "hoorain", "anaya", "hareem", "Ahmed", "alayna", "abeeha", "ibraheem"];
 console.log("i invited " + listOfGuest.length + " guests for the dinner");
 // Q#20
 //list of things for example languages
+console.log("\n Q#20 :list of things");
 let language = ["urdu", "english", "sindhi", "arabi", "chineese", "persian"];
 console.log("i want to learn these languages " + language);
 //Q #21
 // use of object
+console.log("\n Q#21 use of object");
 let mySon = {
     name: "Muhammad Moosa",
     age: 9,
     class: 3
 };
-console.log("my Son " + mySon.name + " is of age ", mySon.age + ",he study in grade " + mySon.class);
+console.log("my Son " + mySon.name + " is of age ", mySon.age + ",he studies in grade " + mySon.class);
 //Q#22 
 // international index error
+console.log("\n creating index error");
 let countries = ["pakistan", "Iran", "palestine"];
 console.log(countries[3]);
 console.log(countries[2]);
 //Q#23 
 //conditional test
-//1.
+console.log("\n conditional test for car");
 let car = "toyota";
 console.log("Is car == 'toyota'? I predict true");
 console.log(car == 'toyota');
 console.log("Is car == 'suzuki'? I predict false");
 console.log(car == 'suzuki');
 //2. 
+console.log("\n conditional test for tv");
 let TV = "LED";
 console.log("Is TV == 'LED'? I predict true");
 console.log(TV == 'LED');
 console.log("Is TV =='LCD'? I predict false");
 console.log(TV == 'LCD');
 //3
+console.log(" \n conditional test for boy name check ");
 let boy = "Moosa";
 console.log("Is boy == 'Moosa'? I predict true");
 console.log(boy == 'Moosa');
 console.log("is boy == 'muhammad'? I predict false");
 console.log(boy == 'Muhammad');
 //4
+console.log("\n conditional test for girl name ");
 let girl = "hoorain";
 console.log("is girl == 'hoorain' ? I predict true");
 console.log(girl == 'hoorain');
@@ -199,8 +207,10 @@ console.log("is learn == 'C++'? I predict false");
 console.log(learn == 'C++');
 // Q#24
 // equality of string
-console.log('apple' == "apple");
-//console.log('apple'=='Apple');
+let fruit = "apple";
+console.log("\n Q#24 equality test for word");
+console.log(fruit == "apple");
+console.log(fruit == 'Apple');
 // lower case function
 console.log("Testing with lower case");
 console.log("Apple".toLowerCase() == "apple");
@@ -216,11 +226,12 @@ console.log(true || false);
 console.log("testing array entities");
 let vegetable = ["carrot", "capsicum", "pumpkin"];
 console.log("is 'carrot' in vegetable?");
-//console.log(vegetable.includes('carrot'));
+console.log(vegetable.includes('carrot'));
 console.log("is 'mango' not in vegetable?");
-//console.log(!vegetable.includes("mango"))
+console.log(vegetable.includes('mango'));
 // q25
 //alien color
+console.log("\n Q#25: alien color");
 let alien_color = "green";
 if (alien_color == "green") {
     console.log(" you earned 5 points");
@@ -241,7 +252,7 @@ else {
 //to run else block
 let alien_Color = "red";
 if (alien_Color == "green") {
-    console.log("you just esrned 5 points");
+    console.log("you just earned 5 points");
 }
 else {
     console.log(" you just earned 10 points");
@@ -281,6 +292,7 @@ else if (aleinColour == "red") {
 }
 //Q# 28
 // stages of life
+console.log("\n Q# 28 : stages of life ");
 let age = 90;
 if (age < 2) {
     console.log("the person is baby");
@@ -302,9 +314,10 @@ else {
 }
 // Q# 29
 //check array with if statement
+console.log("\n Q#29 if in array");
 let favFruit = ["apple", "banana", "mango"];
 if (favFruit.includes("apple")) {
-    console.log("you really look an apple");
+    console.log("you really like an apple");
 }
 if (favFruit.includes("banana")) {
     console.log("you really like banana");
@@ -313,6 +326,7 @@ if (favFruit.includes("mango")) {
     console.log(" you really like mango");
 }
 //Q # 30
+console.log("\n Q#30");
 let userName = ["admin", "mehnazar", "Umair", "Moosa", "Hoorain"];
 userName.forEach(userName => {
     if (userName.includes("admin")) {
@@ -323,11 +337,13 @@ userName.forEach(userName => {
     }
 });
 // Q# 31
+console.log("\n Q# 31:");
 let usernames = [];
 if (usernames.length === 0) {
     console.log("we need to find some users!");
 }
 //Q#32
+console.log("\n Q#32: checking username");
 let current_user = ["maha", "hunain", " hidaya", "hoor", "anaya"];
 let new_user = ["moosa", "ibraheem", "abeeha", "hoor", "anaya"];
 new_user.forEach(newUser => {
@@ -335,10 +351,11 @@ new_user.forEach(newUser => {
         console.log(`${newUser} will need to enter a new user name`);
     }
     else {
-        console.log(`${newUser} is availabe`);
+        console.log(`${newUser} is available`);
     }
 });
 //Q#33
+console.log("\n Q# 33 ordinal number ");
 let numberss = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 numberss.forEach(number => {
     let suffix = "th";
@@ -355,6 +372,7 @@ numberss.forEach(number => {
 });
 //Q#34
 //pizza
+console.log("\n Q#34");
 let pizza = ["afghani pizza", "peproni pizza", "fajita pizza"];
 pizza.forEach(pizzas => {
     console.log(`I like ${pizzas} pizza`);
@@ -362,6 +380,7 @@ pizza.forEach(pizzas => {
 console.log("I really love pizza");
 //Q#35
 // loop in array
+console.log("\n Q# 35");
 let animal = ["Dog", "Cat", "peacock"];
 animal.forEach(animals => {
     console.log(`A ${animals} would make a great pet`);
@@ -369,11 +388,15 @@ animal.forEach(animals => {
 console.log("Any of these animals would make a great pet!");
 //Q#36
 // use of function
+console.log("\n Q#36");
 function make_shirt(size, message) {
     console.log(`making a ${size} t-shirt with the message "${message}" printed on it`);
 }
 make_shirt("large", "coding is life");
+make_shirt("small", "my little champ");
+make_shirt("medium", "All is well");
 // Q#37;
+console.log("\n Q#37");
 function makeShirt(size = "large", message = " I love typescript") {
     console.log(`making a ${size} t-shirt with the message "${message}" printed on it.`);
 }
@@ -381,13 +404,15 @@ makeShirt(); // default values
 makeShirt("medium");
 makeShirt("small", "dive into coding");
 //Q# 38;
+console.log("\n Q#38 ");
 function describe_city(city, country = "Pakistan") {
-    console.log(`${city}is in ${country}.`);
+    console.log(`${city} is in ${country}.`);
 }
 describe_city("karachi");
 describe_city("hyderabad");
 describe_city("Tokyo", "Japan");
 //Q#39
+console.log("\n Q#39");
 function city_country(city, country) {
     return `${city}, ${country}`;
 }
@@ -395,17 +420,16 @@ console.log(city_country("Lahore", "Pakistan"));
 console.log(city_country("tokyo", "japan"));
 console.log(city_country("Paris", "France"));
 //Q#40
+console.log("\n Q#40 ");
 function make_album(artist, title, tracks) {
     let album = { artist, title, tracks };
-    if (tracks) {
-        album['tracks'] = tracks;
-    }
     return album;
 }
 console.log(make_album("first Artist", "the first album"));
 console.log(make_album("second Artist", "second Edition"));
 console.log(make_album("allama Iqbal", " nazmo ki dunia", 3));
 //Q#41
+console.log("\n Q#41");
 let magicians = ["salaar", "halaar", "famous"];
 function show_magician(magicianName) {
     magicians.forEach(magicians => {
@@ -414,24 +438,42 @@ function show_magician(magicianName) {
 }
 show_magician(magicians);
 //Q#42
+console.log("\n Q#42 ");
 function make_great(magicians) {
-    for (let i = 0; i < magicians.length; i++) {
-        magicians[i] = magicians[i] + "the great";
-    }
+    magicians.forEach(magician => {
+        console.log(`${magician} the Great`);
+    });
 }
 make_great(magicians);
 show_magician(magicians);
+//Q#43
+// modify and copying an array
+console.log("\n Q# 43");
+function mak_great(magicians) {
+    let greatMagicians = [];
+    magicians.forEach(mag => {
+        greatMagicians.push(`${mag}  the great`);
+    });
+    return greatMagicians;
+}
+let greatMagicians = mak_great(magicians.slice());
+console.log("original magicians:");
+show_magician(magicians);
+console.log(" Great magician:");
+show_magician(greatMagicians);
 // Q#44
+console.log(" \n Q#44");
 function sandwitch(...items) {
     console.log(`making a sandwitch with:${items.join(',')}`);
 }
 sandwitch("olives", "carrot", "potato");
 sandwitch("cheese", "egg");
 sandwitch("ketchup", "mayogarlic", "bbq sauce");
-//Q#45
-function make_car(manufacturer, model, ...options) {
-    let car = { manufacturer, model };
-    options.forEach(([key, value]) => car[key] = value);
-    return car;
-}
-console.log(make_car("toyota", "carolla", ["red", "year", 2016]));
+// //Q#45
+// function make_model(manufacturer:string, model:string, ...options:[string, any][]): object{
+//     let car={ manufacturer, model};
+//     options.forEach(([key, value]) => car[key]= value);
+//     return car;
+//   }
+//   console.log(make_model("toyota","carolla",["red",2016],));
+//   console.log(make_model("ford","fiesta",["color","blue"],["sunroof","true"]))
